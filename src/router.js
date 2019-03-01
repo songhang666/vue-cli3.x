@@ -17,6 +17,9 @@ export default new Router({
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
+      //webpack1的require.ensure(): https://www.html.cn/doc/webpack2/guides/code-splitting-require/
+      //webpack2-3的import(): https://webpack.js.org/api/module-methods/#import-
+      //魔法注释
       component: () =>
         import(/* webpackChunkName: "about" */ "./views/About.vue")
     }
